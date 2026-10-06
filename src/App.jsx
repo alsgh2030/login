@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/memberList" element={<MemberListPage />} />
           <Route path="/boardList" element={<PostListPage />} />
           <Route path="/posts/create" element={<CreatePostPage />} />
-          <Route path="/posts/edit:id" element={<EditPostPage />} />
+          <Route path="/posts/edit/:id" element={<EditPostPage />} />
         </Routes>
     </BrowserRouter>
   </AuthContextPro>
