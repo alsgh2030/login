@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useAuth } from "./AuthContextPro";
 
 const MemberListPage = () => {
   // 1. 로컬스토리지에서 회원정보들 다 가져오기
@@ -8,8 +9,8 @@ const MemberListPage = () => {
   // 관리자로 로그인하면 회원목록 보이고, 아니면 안보이게
   // 2. 로그인한 사용자 상태 초기화 - null로 초기화
   // 처음에 null(아무도 로그인 안 한 상태)로 시작
-  const [currentUser, setCurrentUser] = useState(null);
-  // const {currentUser, setCurrentUser}=useAuth(); // 둘 중 아무거나 써도 됨
+  // const [currentUser, setCurrentUser] = useState(null);
+  const {currentUser, setCurrentUser}=useAuth(); // 둘 중 아무거나 써도 됨
 
   // 3. 로컬스토리지에서 로그인한 사용자 가져온다
   // 컴포넌트가 처음화면에 나타날 때 한번만 실행되게 ->
