@@ -36,7 +36,7 @@ const NaviBar = () => {
 
           {currentUser && (
             <div>
-              {/* <span>{currentUser.이름}</span> */}
+              <span>{currentUser.userId}</span>
               <button
                 onClick={logout1}
                 className="bg-red-400 text-white px-3 py-1 rounded">로그아웃</button>
